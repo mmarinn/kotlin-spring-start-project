@@ -1,3 +1,2 @@
-
-rootProject.name = "memento"
+rootProject.name = "kotlinspring"
 
