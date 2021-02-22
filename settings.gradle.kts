@@ -1,2 +1,2 @@
-rootProject.name = "kotlinspring"
+rootProject.name = "kotlin-spring-start-project"
 
