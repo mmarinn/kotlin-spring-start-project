@@ -26,6 +26,7 @@ dependencies {
 
     testImplementation("io.kotest:kotest-runner-junit5:4.3.0")
     testImplementation("io.kotest:kotest-extensions-spring:4.3.0")
+    testImplementation("io.kotest:kotest-assertions-json:4.4.1")
 
     testImplementation("io.mockk:mockk:1.10.0")
 
