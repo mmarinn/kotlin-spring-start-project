@@ -5,7 +5,9 @@ plugins {
     id("io.spring.dependency-management") version "1.0.9.RELEASE"
     kotlin("jvm") version "1.4.10"
     kotlin("plugin.spring") version "1.4.10"
+    kotlin("plugin.jpa") version "1.4.10"
     application
+
  }
 
 group = "com.kotlinspring"
@@ -29,6 +31,11 @@ dependencies {
     testImplementation("io.kotest:kotest-assertions-json:4.4.1")
 
     testImplementation("io.mockk:mockk:1.10.0")
+
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.postgresql:postgresql")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.4.0")
 
