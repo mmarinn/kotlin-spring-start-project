@@ -27,7 +27,7 @@ To run:
 ./gradlew bootRun
 ```
 
-To check if the project is running, access the path (GET method)
+Check if the project is running, access the path (GET method)
 
 ```sh
 localhost:8080/helloworld
