@@ -6,12 +6,31 @@
 # Kotlin Spring Start Project
 This project is a template template for new microservices that uses Kotlin, Spring Cloud, Kotest and MockK.
 
+This project uses:
+- Kotlin
+- Gradle (Kotlin DSL)
+- Docker
+- Spring Boot
+- Spring JPA
+- Postgresql
+- Kotest
+- MockK
+
+To build this project:
 
 ```sh
 ./gradlew build
 ```
 
+To run:
 ```sh
 ./gradlew bootRun
 ```
 
+To check if the project is running, acess the path
+
+```sh
+localhost:8080/helloworld
+```
+
+This will print *"Hello, user!"*
