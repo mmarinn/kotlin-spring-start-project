@@ -4,7 +4,7 @@
 	<img alt="Docker" src="https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white"/>
 
 # Kotlin Spring Start Project
-This project is a template template for new microservices that uses Kotlin, Spring Cloud, Kotest and MockK.
+This project is a template template for new microservices that uses Kotlin.
 
 
 - [Kotlin](https://kotlinlang.org/)
