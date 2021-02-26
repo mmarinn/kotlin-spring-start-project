@@ -4,6 +4,7 @@ plugins {
     id("org.springframework.boot") version "2.3.0.RELEASE"
     id("io.kotest") version "0.2.6"
     id("io.spring.dependency-management") version "1.0.9.RELEASE"
+    id("com.avast.gradle.docker-compose") version "0.7.1"
     kotlin("jvm") version "1.4.10"
     kotlin("plugin.spring") version "1.4.10"
     kotlin("plugin.jpa") version "1.4.10"
@@ -42,6 +43,13 @@ dependencies {
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.4.0")
     testImplementation("org.testcontainers:postgresql:1.15.2")
 
+}
+
+dockerCompose {
+    createNested("myNested").apply {
+        useComposeFiles = listOf("src/main/docker/docker-compose.yml")
+        isRequiredBy(project.tasks.named("bootRun").get())
+    }
 }
 
 tasks.withType<KotlinCompile> {
