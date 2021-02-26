@@ -27,6 +27,7 @@ To run:
 ```sh
 ./gradlew bootRun
 ```
+bootRun initializes the project with an embedded postgresql container that was created with docker-compose file in project.
 
 Check if the project is running, access the path (GET method)
 
