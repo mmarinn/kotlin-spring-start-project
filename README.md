@@ -16,6 +16,7 @@ This project is a template template for new microservices that uses Kotlin.
 - [Kotest](https://kotest.io/)
 - [MockK](https://mockk.io/)
 - [TestContainers](https://www.testcontainers.org/)
+- [Kafka](https://kafka.apache.org/)
 
 To build this project:
 
