@@ -4,17 +4,18 @@
 	<img alt="Docker" src="https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white"/>
 
 # Kotlin Spring Start Project
-This project is a template template for new microservices that uses Kotlin, Spring Cloud, Kotest and MockK.
+This project is a template template for new microservices that uses Kotlin.
 
-This project uses:
-- Kotlin
-- Gradle (Kotlin DSL)
-- Docker
-- Spring Boot
-- Spring JPA
-- Postgresql
-- Kotest
-- MockK
+
+- [Kotlin](https://kotlinlang.org/)
+- [Gradle - Kotlin DSL](https://gradle.org/)
+- [Docker](https://www.docker.com/)
+- [Spring Boot](https://spring.io/)
+- [Spring JPA](https://spring.io/)
+- [Postgresql](https://www.postgresql.org/)
+- [Kotest](https://kotest.io/)
+- [MockK](https://mockk.io/)
+- [TestContainers](https://www.testcontainers.org/)
 
 To build this project:
 
