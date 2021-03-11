@@ -19,6 +19,7 @@ This project is a template template for new microservices that uses Kotlin.
 - [Avro Plug in](https://github.com/davidmc24/gradle-avro-plugin)
 - [Docker compose plug in](https://github.com/avast/gradle-docker-compose-plugin)
 - [Kafka](https://kafka.apache.org/)
+- [Avro](https://avro.apache.org/)
 
 
 To build this project:
