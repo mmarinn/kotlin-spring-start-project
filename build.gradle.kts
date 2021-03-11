@@ -5,18 +5,23 @@ plugins {
     id("io.kotest") version "0.2.6"
     id("io.spring.dependency-management") version "1.0.9.RELEASE"
     id("com.avast.gradle.docker-compose") version "0.7.1"
+    id("com.github.davidmc24.gradle.plugin.avro") version "1.0.0"
     kotlin("jvm") version "1.4.10"
     kotlin("plugin.spring") version "1.4.10"
     kotlin("plugin.jpa") version "1.4.10"
     application
 
- }
+}
 
 group = "com.kotlinspring"
 
 repositories {
     mavenCentral()
     jcenter()
+    maven {
+        url = uri("http://packages.confluent.io/maven/")
+    }
+
 }
 
 dependencies {
@@ -27,6 +32,11 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.postgresql:postgresql")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.4.0")
+    implementation("org.springframework.kafka:spring-kafka:2.6.6")
+    implementation("org.apache.avro:avro:1.10.1")
+    implementation("io.confluent:kafka-avro-serializer:6.1.0")
+    implementation ("io.confluent:kafka-schema-registry-client:6.1.0")
+    implementation ("io.confluent:common-config:5.2.2")
 
     testImplementation("io.kotest:kotest-runner-junit5:4.3.0")
     testImplementation("io.kotest:kotest-extensions-spring:4.3.0")

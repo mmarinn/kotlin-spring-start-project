@@ -1,4 +1,4 @@
-package com.kotlinspring.controller
+package com.kotlinspring.controller.http
 
 import com.kotlinspring.services.UserService
 import org.slf4j.LoggerFactory

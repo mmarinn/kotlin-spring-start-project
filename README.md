@@ -16,6 +16,8 @@ This project is a template template for new microservices that uses Kotlin.
 - [Kotest](https://kotest.io/)
 - [MockK](https://mockk.io/)
 - [TestContainers](https://www.testcontainers.org/)
+- [Avro Plug in](https://github.com/davidmc24/gradle-avro-plugin)
+- [Docker compose plug in](https://github.com/avast/gradle-docker-compose-plugin)
 
 To build this project:
 

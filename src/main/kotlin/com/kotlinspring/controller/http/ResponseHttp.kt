@@ -1,3 +1,3 @@
-package com.kotlinspring.controller
+package com.kotlinspring.controller.http
 
 data class ResponseHttp(val helloMessage : String)
