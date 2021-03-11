@@ -12,13 +12,25 @@ import org.springframework.kafka.core.ProducerFactory
 @Configuration
 class KafkaProducerConfig {
 
-      @Bean
+    @Value("\${kafka.bootstrap.servers}")
+    lateinit var bootstrapServer: String
+
+    @Value("\${kafka.key.serializer}")
+    lateinit var keySerializer: String
+
+    @Value("\${kafka.value.serializer}")
+    lateinit var valueSerializer: String
+
+    @Value("\${schema.registry.url}")
+    lateinit var schemaRegistryUrlValue: String
+
+    @Bean
     fun producerFactory(): ProducerFactory<String, Payment> {
         val configProps: MutableMap<String, Any> = HashMap()
-        configProps[ProducerConfig.BOOTSTRAP_SERVERS_CONFIG] = "http://localhost:9092"
-        configProps[ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG] = "org.apache.kafka.common.serialization.StringSerializer"
-        configProps[ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG] = "io.confluent.kafka.serializers.KafkaAvroSerializer"
-        configProps["schema.registry.url"] = "http://localhost:8081"
+        configProps[ProducerConfig.BOOTSTRAP_SERVERS_CONFIG] = bootstrapServer
+        configProps[ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG] = keySerializer
+        configProps[ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG] = valueSerializer
+        configProps[schemaRegistryUrlKey] = schemaRegistryUrlValue
 
         return DefaultKafkaProducerFactory(configProps)
     }
@@ -27,5 +39,6 @@ class KafkaProducerConfig {
     fun kafkaTemplate(): KafkaTemplate<String, Payment> {
         return KafkaTemplate(producerFactory())
     }
-
 }
+
+const val schemaRegistryUrlKey = "schema.registry.url"
